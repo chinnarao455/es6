@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //VAR
+//IT TAKES THE LAST VALUE OR LATEST VALUE UPDATED TO IT
+        var name ="chinna"
+        var name="dasari"
+        console.log(name);
+
+        // //REASSIGN value will be changed
+        var name ="ch"
+        name="cd"
+        console.log(name);//latest value updated
+        
+
+
+        //LET
+//it shows error while giving same names to let
+        // let name ="virat"
+        // let name ="kohli" //syntax error
+        // console.log(name);
+
+        // REASSIGN it will be changed to latest value
+        // let name ="JS"
+        //  name ="REACT" //syntax error
+        // console.log(name);
+
+//CONST
+// const name ="a"
+// name ="k"  //we cant redeclare and re assign 
+//because its constant value
+
+
+//ARROW FUNCTIONS
+
+let name0 = (a,b) =>{ //IT HAS NO FUNCTION BUT HAS FUNC NAME
+console.log(a+b);
+}
+name0(10,20)
+
+let multi = (a,b,c) => {
+    console.log(a*b*c);
+    
+}
+multi(10,20,20)
+
+let div = (a,b) =>{
+console.log(a%b);
+ 
+}
+div(13,3)
+
+//DEFAULT PARAMETER
+
+let default1 = (a,b=10) =>{
+console.log(a+b);
+}
+default1(0)
+
+
+let default2 = (a,b,c=10) =>{
+console.log(a+b+c);
+}
+default2(10,10) //bydefault 10 added to c
+
+
+///////DESTRUCTURING ASSIGN
+
+let arr02 = [1,2,3,4,5,6]
+var [a02,b02,c02,d,e,f]  = arr02
+ console.log(a02,b02,c02,d,e,f);
+ 
+var arr01=["chinna","20","hyd"]
+var [a0,b01,c0,d] = arr01
+console.log(arr01);
+ 
+
+//OBJect
+
+let obj = {name:"chinna",age:"20",place:"hyd"}
+let {name:a,age:b1,place:c} = obj
+console.log(obj);
+
+//SPREAD
+//array
+let arr12 = [1,3,5,7,8,11]
+let arr2 = [...arr12,10,2,4,6,8]
+console.log(arr2);
+
+let ar = ["c","h","i","n","n","a"]
+let ar2 =[...ar,"chinna"]
+console.log(ar2);
+
+// //OBJ
+ 
+let obj1 = {name: "chinna"}
+let obj2 = {...obj1,age: "20",place:"hyd"}
+console.log(obj2);
+
+// //REST PARAMETER
+
+function sum(a,b,...d){
+        console.log(a);
+        console.log(b);
+        console.log(d);
+        
+}
+sum(1,2,3,4,5,6,78,9,10)
+
+//FUNCTIONS USING SPREAD AND REST
+
+let arr = [10,2,3,45,5,6,8,9,77,33,18,17,19]
+function sum(...d){  //d= parameter 
+      let  total = 0
+      for( i of d){
+        total = total + i
+      }
+      console.log(total);
+      
+}
+sum(...arr)
+console.log(Math.max(...arr));
+
+
+let arr11 = [10,2,3,45,5,6,8,9,77,33,18,17,19]
+function sum(...d){  //d= parameter 
+      let  total = 0
+      for( i of d){
+        total = total + i
+      }
+      console.log(total);
+      
+}
+sum(...arr11)
+console.log(Math.min(...arr));
+
+// REST => SAME AS SPREAD BUT USED IN FUNC PARAMETERS
+
+//SHALLOW COPY
+let arr00 = [1,2,3]
+let b = arr00
+b[0] = 18
+console.log(arr00); //updated
+
+let arr100 = [1,2,3]
+let b100 = arr100
+b100[0] = 180
+console.log(arr100); 
+
+//deep copy
+let arr1 = [2,6,8,10]
+let b0= JSON.parse(JSON.stringify(arr1))
+b0[0] = 18
+console.log(arr1);
+
+let arr10 = [2,6,8,10]
+let b10= (JSON.stringify(arr1))
+b10[1] = 99
+console.log(arr10);
+</script>
+</body>
+</html>
